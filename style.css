@@ -146,6 +146,7 @@ section{
     border-radius:3px; 
     transition: .5s; 
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5); 
+        
 }
 .card-black .img-box { 
     position:relative; 
@@ -179,16 +180,19 @@ section{
 }
 .card-black .desc h4 { 
     width:100%; 
-    font-size:1.2em; 
+    font-size:1.7em; 
     color:#fff; 
     font-family:'open_sansbold';
     margin-bottom:5px;   
 }
 .card-black .desc p { 
-    width:100%; 
+    width:90%; 
     font-size:.9em; 
     color:#fff; 
     font-family:'open_sansregular';
+    text-align: left;
+  
+
     
     
 }
