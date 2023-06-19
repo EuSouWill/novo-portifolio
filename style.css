@@ -2,12 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: none;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: url(/imagens/banner.jpg) no-repeat center center fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .container {
@@ -51,12 +53,15 @@ input[type="checkbox"] {
 nav {
   background-color: rgb(255, 255, 255);
   width: 150px;
-  height: 150%;
-  left: -350px;
-  position: absolute;
+  top: 0; /* Alterado para 0 */
+  bottom: 0; /* Adicionado para estender até o final da página */
+  position: fixed; /* Alterado para fixed */
   transition: all 1s;
   float: left;
+  left: -350px;
 }
+
+
 
 input[type="checkbox"]:checked ~ nav {
   transform: translate(350px);
@@ -108,7 +113,7 @@ footer {
   height: 9px;
   position: fixed;
   width: 100%;
-  padding: 20px;
+  padding: 40px;
   border: none;
 }
 
@@ -245,8 +250,12 @@ button {
 audio {
   margin: 20px;
   padding: 20px;
-  bottom: 20px;
+  bottom: 0;
+  
+  position: fixed;
+  left: 20px;
 }
+
 
 @media screen and (max-width: 768px) {
   .container {
@@ -282,14 +291,23 @@ audio {
   .card-black .img-box img {
     border-radius: 10px;
   }
+
+  .card-black .desc {
+    margin-bottom: 10px;
+  }
+
+  .card-black h2 {
+    font-size: 28px;
+  }
 }
 
-.card-black .desc  {
+h1{
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  color: #fff;
   text-align: center;
-  margin-bottom: 20px;
-}
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3b94c7, 0 0 40px #60b2e1,
+   0 0 50px #51a8dd, 0 0 60px #ff00de, 0 0 70px #ff00de;
 
-.card-black h2{
-  font-size: 34px;
-  text-align: center;
+
 }
