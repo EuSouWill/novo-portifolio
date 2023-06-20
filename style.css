@@ -3,13 +3,14 @@
   margin: 0;
   box-sizing: border-box;
   border: none;
+  max-width: 1300px;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: url(/imagens/banner.jpg) no-repeat center center fixed;
   background-size: cover;
-  overflow-x: hidden;
+ 
 }
 
 .container {
@@ -40,6 +41,7 @@ ul {
   top: 120px;
   width: 100%;
   height: 130px;
+  
 }
 
 img {
@@ -48,23 +50,24 @@ img {
 
 input[type="checkbox"] {
   display: none;
+  
 }
 
 nav {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   width: 150px;
-  top: 0; /* Alterado para 0 */
-  bottom: 0; /* Adicionado para estender até o final da página */
-  position: fixed; /* Alterado para fixed */
+  top: 0;
+  bottom: 0;
+  position: fixed;
   transition: all 1s;
   float: left;
   left: -350px;
+  
 }
-
-
 
 input[type="checkbox"]:checked ~ nav {
   transform: translate(350px);
+  
 }
 
 aside {
@@ -86,8 +89,10 @@ a {
 }
 
 a:hover {
-  background-color: rgb(100, 104, 108);
+  background-color: transparent;
   color: rgb(47, 43, 43);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3b94c7, 0 0 40px #60b2e1,
+    0 0 50px #51a8dd, 0 0 60px #2e1eae, 0 0 70px #131ccf;
 }
 
 label {
@@ -97,10 +102,12 @@ label {
   position: absolute;
   z-index: 1;
   background-color: transparent;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3b94c7, 0 0 40px #60b2e1,
+    0 0 50px #51a8dd, 0 0 60px #2e1eae, 0 0 70px #131ccf;
 }
 
 label:hover {
-  color: rgb(100, 104, 108);
+  color: rgb(148, 189, 230);
 }
 
 footer {
@@ -130,7 +137,7 @@ section {
 
 .card-black {
   width: 100%;
-  max-height: 500px;
+  max-height: 480px;
   height: 100%;
   margin-bottom: 1px;
   margin-bottom: 20px;
@@ -251,11 +258,20 @@ audio {
   margin: 20px;
   padding: 20px;
   bottom: 0;
-  
   position: fixed;
-  left: 20px;
+  left: 120px;
 }
 
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3b94c7, 0 0 40px #60b2e1,
+    0 0 50px #51a8dd, 0 0 60px #ff00de, 0 0 70px #ff00de;
+  margin: 20px;
+  padding: 20px;
+}
 
 @media screen and (max-width: 768px) {
   .container {
@@ -268,47 +284,61 @@ audio {
 
   ul {
     top: 100px;
-    height: auto;
-    padding: 10px;
   }
 
   aside {
-    height: 300px;
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  a {
-    font-size: 20px;
-    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 400px;
+    width: 100px;
   }
 
   section {
-    margin-left: 10px;
-    margin-top: 0;
+    margin-top: 10px;
+    margin-left: 130px;
+    height: 500px;
   }
 
-  .card-black .img-box img {
-    border-radius: 10px;
-  }
-
-  .card-black .desc {
+  .card-black {
+    max-height: 300px;
     margin-bottom: 10px;
   }
 
-  .card-black h2 {
-    font-size: 28px;
+  .card-black .img-box {
+    width: 20%;
   }
-}
 
-h1{
-  font-family: 'Arial', sans-serif;
-  font-size: 48px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3b94c7, 0 0 40px #60b2e1,
-   0 0 50px #51a8dd, 0 0 60px #ff00de, 0 0 70px #ff00de;
-  margin: 20px;
-  padding: 20px;
+  .card-black .desc {
+    width: 60%;
+    padding: 0px 10px;
+    padding-left: 10px;
+  }
 
+  .card-black .desc h4 {
+    font-size: 1.3em;
+  }
+
+  .card-black .desc p {
+    font-size: 18px;
+  }
+
+  .card-black .desc .veja {
+    font-size: 0.8em;
+  }
+
+  button {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  audio {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 10px;
+    padding: 10px;
+  }
 }
