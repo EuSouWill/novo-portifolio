@@ -171,6 +171,7 @@ section {
 .card-black:hover .img-box img {
   transform: scale(1.1);
   opacity: 0.6;
+  margin: 10px;
 }
 
 .card-black .desc {
