@@ -256,17 +256,18 @@ button {
 }
 
 audio {
-  margin: 20px;
+  background-color: transparent;
+  margin: 0px;
   padding: 20px;
   bottom: 0;
   position: fixed;
-  left: 120px;
+  right: inherit;
 }
 
 h1 {
   font-family: 'Arial', sans-serif;
   font-size: 48px;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3b94c7, 0 0 40px #60b2e1,
     0 0 50px #51a8dd, 0 0 60px #ff00de, 0 0 70px #ff00de;
@@ -345,3 +346,27 @@ h1 {
     padding: 10px;
   }
 }
+
+/* Para navegadores WebKit (Google Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background: #3498da ;
+  border-radius: 6px;
+ 
+  
+}
+
+/* Para o Mozilla Firefox */
+::-moz-scrollbar {
+  width: 12px;
+}
+
+
+
+
+
