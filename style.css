@@ -4,6 +4,7 @@
   box-sizing: border-box;
   border: none;
   max-width: 1300px;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -12,7 +13,14 @@ body {
   background-size: cover;
  
 }
-
+.download-button{
+  position: absolute;
+  left: 10;
+  right: 0;
+  top: 0;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -26,6 +34,7 @@ header {
   width: 100%;
 }
 
+
 a {
   text-decoration: none;
 }
@@ -37,7 +46,7 @@ p {
 }
 
 ul {
-  position: absolute;
+  position: fixed;
   top: 120px;
   width: 100%;
   height: 130px;
@@ -79,6 +88,7 @@ aside {
   margin-right: 0px;
   margin-bottom: 15px;
   float: right;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -86,6 +96,7 @@ a {
   display: block;
   padding: 20px 20px;
   color: rgb(78, 115, 234);
+  font-family: 'Poppins', sans-serif;
 }
 
 a:hover {
@@ -122,6 +133,7 @@ footer {
   width: 100%;
   padding: 40px;
   border: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 section {
@@ -147,6 +159,7 @@ section {
   border-radius: 20px;
   transition: 0.5s;
   box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-black .img-box {
@@ -155,6 +168,7 @@ section {
   height: 10%;
   transition: 0.5s;
   float: left;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-black .img-box img {
@@ -201,6 +215,7 @@ section {
   font-family: 'open_sansregular';
   text-align: justify;
   justify-content: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-black .desc .veja {
@@ -256,17 +271,18 @@ button {
 }
 
 audio {
-  background-color: transparent;
+
   margin: 0px;
   padding: 20px;
   bottom: 0;
   position: fixed;
-  right: inherit;
+  left: 0;
+  right: 0; 
   
 }
 
 h1 {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 48px;
   color: #ffffff;
   text-align: center;
@@ -371,3 +387,53 @@ h1 {
 
 
 
+/* Código comentado 
+
+
+Comentários sobre o código CSS fornecido:
+
+* { ... }: Esse seletor aplica os estilos a todos os elementos do HTML, zerando o preenchimento (padding) e a margem (margin), definindo a caixa de modelagem como "border-box" (para incluir o padding e a borda no tamanho total do elemento) e removendo a borda.
+
+body { ... }: Define os estilos para o corpo da página, incluindo a família de fontes, um plano de fundo com uma imagem chamada "banner.jpg" posicionada no centro e fixa (não se move durante a rolagem) e com tamanho de capa (background-size: cover).
+
+.container { ... }: Define os estilos para um contêiner com largura máxima de 800px, margem automática (centralizado horizontalmente) e preenchimento de 20px.
+
+header { ... }: Define os estilos para o cabeçalho, incluindo um plano de fundo transparente e altura mínima de 60px.
+
+.fixed-nav { ... }: Estilos para a navegação fixa, com um plano de fundo de cor #f7f707 (amarelo claro) e texto de cor #ff00de (rosa brilhante), com posição fixa na parte superior (top: 0) e que se estende ao longo de toda a largura (left: 0 e right: 0).
+
+a { ... }: Remove a decoração padrão de links (sublinhado) e define a cor do texto para um azul claro (rgb(78, 115, 234)).
+
+p { ... }: Define o alinhamento do texto como justificado, o tamanho da fonte como 26px e uma margem inferior de 20px para parágrafos.
+
+ul { ... }: Define a posição da lista não ordenada como fixa na parte superior (top: 120px) e com largura total (width: 100%), altura de 130px.
+
+img { ... }: Define a largura das imagens como 35px.
+
+input[type="checkbox"] { ... }: Esconde as caixas de seleção (checkboxes) no documento.
+
+nav { ... }: Define os estilos para a navegação, inicialmente posicionada à esquerda da tela com o valor left: -350px, e com transição de 1 segundo (all 1s) quando há uma mudança no estado da caixa de seleção relacionada.
+
+input[type="checkbox"]:checked ~ nav { ... }: Quando a caixa de seleção está marcada, a navegação é deslocada para a direita (350px) usando a transformação CSS "translate".
+
+aside { ... }: Define os estilos para uma barra lateral com plano de fundo de cor #f7f707 (amarelo claro) e altura de 500px.
+
+footer { ... }: Estilos para o rodapé, com uma borda superior de 1px sólida (#333), cor de fundo transparente e posição fixa na parte inferior da tela.
+
+section { ... }: Estilos para as seções da página, com fundo transparente, altura de 800px, margens e flutuação à esquerda.
+
+.card-black { ... }: Estilos para cartões com um efeito de transição quando passa o mouse sobre eles.
+
+.card-black:hover { ... }: Define o comportamento dos cartões quando o mouse está sobre eles, alterando a opacidade e a escala da imagem.
+
+.desc { ... }: Estilos para a descrição dentro dos cartões, com gradiente de fundo e cor do texto branca (#fff).
+
+@media screen and (max-width: 768px) { ... }: Essa regra define estilos específicos quando a tela tem uma largura máxima de 768 pixels, como reduzir o preenchimento, altura e largura de certos elementos.
+
+::-webkit-scrollbar { ... } e ::-webkit-scrollbar-thumb { ... }: Estilos para personalizar a aparência das barras de rolagem (scrollbars) em navegadores WebKit, como Chrome e Safari.
+
+::-moz-scrollbar { ... }: Estilos para personalizar a aparência das barras de rolagem (scrollbars) no navegador Mozilla Firefox.
+
+Os comentários ajudam a entender melhor a finalidade de cada parte do código e facilitam a manutenção do CSS no futuro. É uma boa prática incluí-los para tornar o código mais legível e compreensível.
+
+*/
