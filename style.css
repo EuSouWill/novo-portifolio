@@ -99,7 +99,7 @@ label {
   font-size: 55px;
   color: #fff;
   padding: 15px;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   background-color: transparent;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3b94c7, 0 0 40px #60b2e1,
@@ -262,6 +262,7 @@ audio {
   bottom: 0;
   position: fixed;
   right: inherit;
+  
 }
 
 h1 {
